@@ -1,11 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-**NOTE: This is a package to apply algorithms of truth discovery
-<https://en.wikipedia.org/wiki/Truth_discovery> and
-<https://arxiv.org/abs/1409.6428> and
-<https://www.semanticscholar.org/paper/Knowing-What-to-Believe-(when-you-already-know-Pasternack-Roth/579e1e9217cfed6d563cedf8f8fdcd1604fc0917>**
-
 # truthfinder
 
 <!-- badges: start -->
