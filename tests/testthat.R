@@ -1,4 +1,4 @@
 library(testthat)
-library(truthfinder)
+library(truthfinding)
 
-test_check("truthfinder")
+test_check("truthfinding")

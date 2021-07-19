@@ -1,4 +1,4 @@
-Package: truthfinder
+Package: truthfinding
 Title: Implements truth discovery (truth finding) algorithms in R 
 Version: 0.0.0.9000
 Authors@R: 
