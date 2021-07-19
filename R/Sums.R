@@ -9,7 +9,6 @@
 #' @export
 #'
 #' @examples
-#' library(truthfinder)
 #' data = data.frame(source = c('source1','source1','source2','source2','source3','source3','source4',
 #' 'source4','source4'),
 #' object = c('x','y','y','z','x','z','x','y','z'),
@@ -17,7 +16,7 @@
 #' Sums(data)
 #' @importFrom data.table ":="
 Sums <- function(data, limit = 0.001, max_iter = 20){
-  dt <- data.table(data, key = c('object','fact'))
+  dt <- data.table::data.table(data, key = c('object','fact'))
   dt[, n_claims := .N, by = source]
   dt[,source_trust := 0]
   claims <- get_prior_belief(dt, type = 'fixed')

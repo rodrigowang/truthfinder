@@ -1,5 +1,4 @@
 test_that("Average Log algorithm works", {
-  library(data.table)
   data = data.frame(source = c('source1','source1','source2','source2','source3','source3','source4',
                                'source4','source4'),
                     object = c('x','y','y','z','x','z','x','y','z'),

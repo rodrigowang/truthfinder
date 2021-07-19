@@ -17,7 +17,7 @@
 #' average_log(data)
 average_log <- function(data, limit = 0.001, max_iter = 20){
 
-  dt <- data.table(data, key = c('object','fact'))
+  dt <- data.table::data.table(data, key = c('object','fact'))
   dt[, n_claims := .N, by = source]
   dt[,source_trust := 0]
   claims <- get_prior_belief(dt, type = 'fixed')

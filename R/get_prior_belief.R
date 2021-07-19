@@ -11,13 +11,20 @@
 #'
 get_prior_belief <- function(data, type){
   if(type == 'fixed'){
-    return(unique(data.table(object = data$object, fact = data$fact, belief = 0.5,
-                             key = c('object','fact'))))
+    return(unique(data.table::data.table(object = data$object,
+                                         fact = data$fact, belief = 0.5,
+                                         key = c('object','fact'))))
   }
   if(type == 'voted'){
-    priors <- data.table(data)
+    priors <- data.table::data.table(data)
     priors <- priors[, .(qtd = .N), by = .(object,fact)]
     priors[, belief := qtd/sum(qtd), by = .(object)]
+    return(priors[,.(object, fact, belief)])
+  }
+  if(type == 'uniform'){
+    priors <- data.table(data)
+    priors <- priors[, .(qtd = length(unique(fact))), by = .(object,fact)]
+    priors[, belief := 1/sum(qtd), by = .(object)]
     return(priors[,.(object, fact, belief)])
   }
 }

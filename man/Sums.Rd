@@ -22,7 +22,6 @@ Sums
 Implement Sums algorithm
 }
 \examples{
-library(truthfinder)
 data = data.frame(source = c('source1','source1','source2','source2','source3','source3','source4',
 'source4','source4'),
 object = c('x','y','y','z','x','z','x','y','z'),

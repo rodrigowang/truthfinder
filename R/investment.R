@@ -24,7 +24,7 @@
 #' @importFrom data.table ":="
 investment <- function(data, limit = 0.001, g = 1.2, max_iter = 20){
 
-  dt <- data.table(data)
+  dt <- data.table::data.table(data)
   dt[, n_claims := .N, by = source]
   dt[,source_trust := 1]
   claims <- get_prior_belief(dt, type = 'voted')
