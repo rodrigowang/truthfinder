@@ -11,7 +11,7 @@ truthfinder(
   damping_factor = 0.3,
   influence_parameter = 0.5,
   initial_trust = 0.9,
-  similarity = NULL
+  implication_function = NULL
 )
 }
 \arguments{

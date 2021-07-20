@@ -27,7 +27,7 @@ conflicts.
 You can install truthfinder like so:
 
 ``` r
-devtools::install_github("rodrigowang/truthfinder")
+devtools::install_github("rodrigowang/truthfinding")
 ```
 
 ## Quick demo
